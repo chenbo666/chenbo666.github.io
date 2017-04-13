@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -18,11 +18,11 @@
 			<aside>aside</aside>
 			<main>main</main>
         </section>	
-        <section id="content"class="clearfix">
+        <section class="clearfix">
 			<aside>aside</aside>
 			<main>main</main>
         </section>	
-        <section id="content"class="clearfix">
+        <section class="clearfix">
 			<aside>aside</aside>
 			<main>main</main>
         </section>		
