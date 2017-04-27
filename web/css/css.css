@@ -1,0 +1,68 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+body{
+	padding: 0;
+	margin: 0;
+}
+.menu{	
+    height: 48px;
+	background: greenyellow;
+    box-shadow: 0 1px 6px 0 #686;
+    text-align: center;   
+}
+.menu ul{	
+	text-align: left;
+	text-indent: 3px;
+	list-style: none;	
+	display: inline-block;
+	margin:auto;
+	
+}
+.menu ul li{
+	position: relative;
+float: left;
+}
+.menu ul li a{
+	
+	color: #000;
+	width: 120px;
+	height: 48px;
+	line-height: 48px;
+	display: inline-block;
+	text-decoration: none;
+	border-left: solid 1px rgba(0,0,0,0.2);
+	}
+.menu ul li a:hover{
+	color: #fff;
+}
+.menu ul li:last-child a{
+border-right: solid 1px rgba(0,0,0,0.2);
+}
+.menu ul li a i{
+	margin-right: -10px;
+	transform: scale(0);
+	transition: all .5s;
+}
+.menu ul li a:hover i{
+	margin-right: 10px;
+	transform: scale(1);
+}
+.menu ul li::after{
+	content: "";
+	position: absolute;
+    left: 10%;
+    right: 10%;
+	top: 20%;
+	bottom: 0;
+    border-radius: 100%;
+   box-shadow: 0 2px 4px 0 rgba(0,0,0,0);
+   transition: all .5s;
+	z-index: -1;
+}
+.menu ul li:hover::after{
+	box-shadow: 0 2px 6px 3px rgba(0,0,0,0.5);
+}
+
