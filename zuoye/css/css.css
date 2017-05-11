@@ -1,0 +1,42 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-color: lightblue;
+}
+form{
+	width: 400px;
+	height: 300px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background-color: lavender;
+	text-align: center;
+}
+#email,#name,#password{
+	border: 1px dashed #2cd;
+	outline: none;
+	margin: 10px;
+	width: 250px;
+	height: 30px;	
+}
+#email:hover,#name:hover,#password:hover{
+	border: 1px solid #2cd;
+	box-shadow:  0px 0px 3px 0px rgba(0,0,0,.4) inset;
+}
+#submit{
+	cursor: pointer;
+	buttom:0px;
+	
+	width: 150px;
+	height: 40px;
+	margin: 20px;
+	background: greenyellow;
+	transition: all .5s;
+}
+#submit:hover{
+	background: deepskyblue;
+	letter-spacing: 3px;
+}
