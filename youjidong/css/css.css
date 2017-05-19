@@ -1,0 +1,49 @@
+.clearfix::after{
+	content: "";
+	display: block;
+	clear:both;
+}
+p{
+	color: #fff;
+}
+h1{
+	color:#fff
+}
+header{
+	width: 1200px;
+	margin: auto;
+	position: relative;
+}
+#test{
+	background: url(../img/untdditled.png) no-repeat fixed;
+	background-size:100%;
+}
+nav ul li{
+	list-style-type: none;
+	padding: 0;
+}
+.xiaofu{
+	position: absolute;
+	right:0px;
+	top:0px;、
+	max-width: 1200px;
+     margin: 30px auto;
+}
+.xiaofu li{	
+	float:left;
+}
+.xiaofu li a{
+	text-decoration: none;
+	color: #FFFFFF;
+	margin: 20px 10px;
+	padding: 10px;
+	border: 1px solid transparent;
+	transition: all .4s;
+}
+.xiaofu li a:hover{
+	color: fuchsia;
+	border: 1px solid #FFFFFF;
+}
+.fuck{
+	right:0;
+}
