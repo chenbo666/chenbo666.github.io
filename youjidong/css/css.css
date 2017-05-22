@@ -3,8 +3,14 @@
 	display: block;
 	clear:both;
 }
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
 p{
-	color: #fff;
+	color: #FFFFFF;
 }
 h1{
 	color:#fff
@@ -45,5 +51,23 @@ nav ul li{
 	border: 1px solid #FFFFFF;
 }
 .fuck{
-	right:0;
+    position: absolute;
+    right: 0;
+    bottom: -215px;
+}
+.fuck p{
+	color:purple;
+}
+.hobby li{
+	float: left;
+	margin: 10px 20px 20px 0px;
+	padding: 20px;
+	background-color: rgba(100,200,50,.5);
+	transition: background-color .3s;
+}
+.hobby li:hover{
+	background-color: rgba(100,200,50,.8);
+}
+.hobby li a {
+	color: #FFFFFF;
 }
