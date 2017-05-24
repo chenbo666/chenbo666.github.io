@@ -1,0 +1,141 @@
+.clearfix::after{
+	content: "";
+	display: block;
+	clear:both;
+}
+*{
+	box-sizing: border-box;
+}
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+p{
+	color: #FFFFFF;
+}
+h1{
+	color:#fff
+}
+header{
+	width: 1200px;
+	margin: auto;
+	background-repeat: no-repeat;
+	position: relative;
+}
+#test{
+	background: url(../img/untdditled.png) no-repeat fixed;
+	background-size:100%;
+}
+nav ul li{
+	list-style-type: none;
+	padding: 0;
+}
+.xiaofu{
+	position: absolute;
+	right:0px;
+	top:0px;、
+	max-width: 1200px;
+     margin: 30px auto;
+}
+.xiaofu li{	
+	float:left;
+}
+.xiaofu li a{
+	text-decoration: none;
+	color: #FFFFFF;
+	margin: 20px 10px;
+	padding: 10px;
+	border: 1px solid transparent;
+	transition: all .4s;
+}
+.xiaofu li a:hover{
+	color: fuchsia;
+	border: 1px solid #FFFFFF;
+}
+.hobby li{
+	float: left;
+	margin: 10px 20px 20px 0px;
+	padding: 20px;
+	background-color: rgba(100,200,50,.5);
+	transition: background-color .3s;
+}
+.hobby li:hover{
+	background-color: rgba(100,200,50,.8);
+}
+.hobby li a {
+	color: #FFFFFF;
+}
+.hobby{
+	margin-left: 0px;
+	
+}
+main{
+	width: 1200px;
+	margin: auto;
+
+	background-repeat: no-repeat;
+	position: relative;
+}
+main h2{
+	color: #FFFFFF;
+}
+main section figure {
+	float: left;
+	width: 30%;
+	overflow: hidden;
+	margin: calc(10%/6);
+	box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+	position: relative;
+}
+ figure img{
+	width: 100%;
+	vertical-align: top;
+	transition: all .5s;
+}
+ figure:hover img{
+	cursor: pointer;
+}
+figure figcaption{
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+	height: 20px;
+	color: #fff;
+	opacity: 0;
+	margin: auto;
+	transition: opacity .5s; 
+}
+figure:hover figcaption{
+	opacity: 1;
+}
+dt{
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	background: #fff;
+	text-align: center;
+}
+dd{
+	display: inline-block;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	background: #000;
+	text-align: center;
+	margin: 0 40px 0 5px;
+	color: #fff;
+}
+input,select{
+	width: 32%;
+	height: 40px;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	padding-left: 1em;
+}
