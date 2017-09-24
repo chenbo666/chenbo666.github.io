@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>table change color</title>
+		<style type="text/css">
+			#ccl{
+				width:800px;
+				border: 1px solid rgba(0,0,0,0.5);
+				border-collapse: collapse;
+			}
+			#ccl tr td{
+				border: 1px solid rgba(0,0,0,0.4);
+				height: 40px;
+				width: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<table id="ccl">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<div id="btn">
+			<a href="javascript:" id="gh">隔行变色</a>
+			<a href="Javascript:" id="jb">特殊变色</a>
+			
+		</div>
+		<script type="text/javascript">
+			var  gh=document.getElementById("gh");
+			var  jb=document.getElementById("jb");
+			var  ccl=document.getElementById("ccl");
+			var  tr=document.getElementsByTagName("tr");
+			var td=document.getElementsByTagName("td")
+			gh.onclick=function(){
+				for (i in td) {
+				td[i].style.background="hsla("+(i/10)*20+",70%,60%,.5)";
+				}
+				}
+			jb.onclick=function(){
+				for (i in td) {
+				td[i].style.background="hsla("+(i/1)*100+",70%,60%,.5)";
+			}
+			}
+		</script>
+	</body>
+</html>
