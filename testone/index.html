@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<input type="button" class="button" value="1" />
+		<input type="button" class="button" value="2" />
+		<input type="button" class="button" value="3" />
+		<input type="button" class="button" value="4" />
+		<input type="button" class="button" value="5" />
+		<input type="text" id="text" value="" />
+		<script type="text/javascript">
+			var button=document.getElementsByClassName("button");
+			var i=0;
+			var text=document.getElementById("text");
+			for (i=0;i<5;i++) {
+				button[i].addEventListener("click",function(i) {
+					return function(){text.value="你点击了"+i+"号按钮"};
+				}(i+1));
+			}
+		</script>
+	</body>
+</html>
