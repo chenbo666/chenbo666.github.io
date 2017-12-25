@@ -1,163 +1,68 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8" />
-		<title>这是我的第二次作业</title>
+		<title>新闻逐条</title>
 		<style type="text/css">
-			body{
-				width:1000px;
-				height:500px;
-			}
-			div{
-				margin: 0px auto;
-				width: 400px;
-			
-			    top: 0;
-			    bottom: 0;
-			}
-			.intgroup{
-				padding:0px 0px 0px 0px;
-			}
-			h1{
+			.word ul{
 				margin: 0;
-				padding: 250px 0px 0px 300px;
+				padding: 0;
 			}
-			.chance{
-				padding: 0px 0px 0px 0px;
+			.word ul li{
+				list-style: none;
+					font-size:12px;
+				line-height: 18px;
+			}
+			.menu .word{
+				width: 200px;
+				height: 36px;
 			
+				border: 1px dashed #333;
+				overflow: hidden;
+				
 			}
-			.chance input{
-				display: block;
-				padding-left: 1px;
-			}
-			.intgroup{
-				display: none;
-			}
-			/*.hide{
-				display: none;
-			}
-			.show{
-				display: block;
-			}*/
 		</style>
-
 	</head>
-
 	<body>
-		<h1>猜数字游戏</h1>
-		<div class="chance">
-			<input type="button" id="easy" value="简单" <br/>
-			<input type="button" id="medicine" value="中等" <br/>
-			<input type="button" id="difficuit" value="困难" <br />
-		</div>
-		<div class="intgroup">
-
-			<div class="faker">
-				<input type="number" id="num" placeholder="0-10整数，6次机会" />
-				<input type="button" id="guess" value="提交" style="display: block;" />
-				<input type="button" id="reset" value="重来" style="display:none;" />
+		<div class="menu">
+			<div class="word">
+                   	<ul class="f">
+                   		<li>迟</li>
+                   		<li>来</li>
+                   		<li>的</li>
+                   		<li>作</li>
+                   		<li>业</li>
+                   		<li>还</li>
+                   		<li>是</li>
+                   		<li>热</li>
+                   		<li>的</lis>
+                   	</ul>				
 			</div>
-			<div class="time">
-				剩余次数:
-				<span></span>
-			</div>
-			<div class="info">
-				这次猜的
-				<span></span>
-			</div>
-			<script type="text/javascript">
-				//				获取元素
-				            var ineasy=document.getElementById('easy');
-				            var inmedicine=document.getElementById('medicine');
-				            var indifficuit=document.getElementById('difficuit');
-				            var intgroup=document.getElementsByClassName('intgroup')[0];
-				            var cce=document.getElementsByClassName('chance')[0];
-				            var numrun=0;
-				            inmedicine.addEventListener("click",medicineg)
-				            ineasy.addEventListener("click",easyg);
-				            indifficuit.addEventListener("click",difficuitg);
-				            function easyg () {
-				            	intgroup.style.display="block";
-				            	cce.style.display="none";
-				            	numrun=10;
-				            	oNum.setAttribute('placeholder',"0-"+numrun+"整数，"+guesstime+"次机会");
-				            	suijinum=Math.floor(Math.random()*(numrun+1));
-				            }
-				            function medicineg(){
-				                intgroup.style.display="block";
-				            	cce.style.display="none";
-				            	numrun=50;
-				            	oNum.setAttribute('placeholder',"0-"+numrun+"整数，"+guesstime+"次机会");
-				            	suijinum=Math.floor(Math.random()*(numrun+1));
-				            }
-				            function difficuitg(){
-				              intgroup.style.display="block";
-				            	cce.style.display="none";
-				            	numrun=100;
-				            	oNum.setAttribute('placeholder',"0-"+numrun+"整数，"+guesstime+"次机会");
-				            	suijinum=Math.floor(Math.random()*(numrun+1));
-				            }
-				            
-				            
-				            guesstime=6;
-				            numtest=0;
-				            var oBtnG=document.getElementById('guess');
-				            var oBtnR=document.getElementById('reset');
-				            var oNum=document.getElementById('num');
-				            oTimes=document.querySelector(".intgroup .time span");
-				            oInfo=document.querySelector(".intgroup .info span");
-				            oBtnG.addEventListener("click",checkguess);
-				            oBtnR.addEventListener("click",repeatGame);
-				            oTimes.innerHTML=guesstime;
-				            
-				             function checkguess () {
-				             	numtest=parseInt(oNum.value);
-				             
-				             if(isNaN(numtest)){
-				             	oInfo.innerHTML+="该次输入"+numtest+"不是数字，我非常怀疑你的智商。<br>";
-				             }
-				             if (guesstime-->0) {
-				             	if(numtest>suijinum){
-				             		oInfo.innerHTML+="这次猜的"+numtest+",有点偏大<br>";
-				             	}
-				             	
-				                else if(numtest<suijinum){
-				                	oInfo.innerHTML+="这次猜的"+numtest+",有点偏小<br>";
-				             	}
-				                else if (numtest==suijinum){
-				                	oInfo.innerHTML+="恭喜猜对了，正确答案正是"+numtest+"。<br>";
-										closeGame();
-				                }
-				                else{
-				                	oInfo.innerHTML+="非正常情况<br>";
-				                }
-				             }
-				             if(guesstime<=0){
-				             	oInfo.innerHTML+="次数用完，游戏结束！<br>";
-									closeGame();
-				             }
-				             oTimes.innerHTML=guesstime;
-				             oNum.value="";
-				             oNum.focus();
-				             }
-				             function closeGame () {
-				             	 oNum.disabled=true;
-				             	 oBtnG.style.display="none";
-				             	 oBtnR.style.display="block";
-				             }
-				             function repeatGame () {
-				             	 suijinum=Math.floor(Math.random()*(numrun+1));
-				             	 guesstime=6;
-				             	 oTimes.innerHTML=guesstime;
-				             	 oNum.disabled=false;
-				             	 oBtnG.style.display="block"
-				             	oBtnR.style.display="none";
-								oInfo.innerHTML="新一轮游戏开始，请猜数字！<br>";
-								oNum.focus();
-				             }
-			</script>
 		</div>
 	</body>
-
+	<script type="text/javascript">
+		var menu=document.querySelector('.menu');
+		var word=document.querySelector('.word');
+		var oli=document.querySelectorAll('.f li');
+		var f=document.querySelector('.f');
+	     f.innerHTML += f.innerHTML;
+	     function run () {
+	     	if(word.scrollTop > 108)
+	     	{
+	     		word.scrollTop =5;
+	     	}
+	     	else{
+	     		word.scrollTop++;
+	     		if(word.scrollTop % 36 == 0)
+	     		setTimeout(run,1000);
+	     		else
+	     		setTimeout(run,100);
+	     		
+	     	}
+	     	console.log(word.scrollTop);
+	     }
+		run();
+		
+	</script>
 </html>
+
