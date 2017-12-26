@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>大小图片的切换效果</title>
+		<style>
+			div img {
+				width: 400px;
+				height: 300px;
+				margin: 0;
+				padding-bottom:50px ;
+				display: block;
+			}
+			div img:hover {
+				cursor: url('img/img/plus_cursor.png'), pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="smph">
+			<img id="heigh" src="img/img/v1_small.jpg" />
+			<img id="widh" src="img/img/h1_small.jpg" />
+		</div>
+	</body>
+	<script type="text/javascript">
+		var imgh = document.querySelector('.smph #heigh');
+		var imgw = document.querySelector('.smph #widh');
+		var i=1;
+				imgh.addEventListener('click', run);
+		        imgw.addEventListener('click', rerun);
+       
+		function run() {
+			i++;
+			if(i%2==0){
+				imgh.style.width = '100%';
+				imgh.style.height = '900px';
+				imgh.style.top = '0';
+				imgh.style.left = '0';
+				imgw.style.display='none';
+				imgh.style.cursor="url('img/img/close_cursor.png'),pointer";
+			}else{
+				  imgh.style.width = '400px';
+			      imgh.style.height = '300px';
+			      imgw.style.display='block';
+			}
+			
+			imgh.addEventListener("mousemove",function(){
+				
+				setInterval(function(){
+					console.log(imgh.scrollTop);
+					imgh.scrollTop+=100;
+				},10)
+			})
+		}
+
+		function rerun() {
+			i++;
+			if(i%2==0)
+			{
+				imgw.style.width = '100%';
+			imgw.style.height = '100%';
+			imgw.style.top = '0';
+			imgw.style.left = '0';
+			imgh.style.display='none';
+			imgw.style.cursor="url('img/img/close_cursor.png'),pointer";
+			}else{imgw.style.width = '400px';
+			      imgw.style.height = '300px';
+    			  imgh.style.display='block';
+			}
+			
+		
+	              
+			}
+		
+	</script>
+
+</html>
